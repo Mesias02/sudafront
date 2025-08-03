@@ -1,0 +1,174 @@
+.match-manager-main {
+  background: #f8fafc;
+  padding: 40px 0;
+  min-height: 100vh;
+}
+.match-manager-container {
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 4px 24px #0001;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 30px 30px 40px 30px;
+}
+.mm-header {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin-bottom: 32px;
+}
+.mm-teams-row {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  gap: 32px;
+  margin-bottom: 18px;
+}
+.mm-card {
+  background: #f1f5f9;
+  flex: 1;
+  padding: 24px 18px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 2px 10px #0001;
+  min-width: 180px;
+}
+.mm-card label {
+  font-size: 1.15rem;
+  font-weight: 500;
+  margin-bottom: 10px;
+  display: block;
+}
+.mm-card select {
+  font-size: 1rem;
+  width: 90%;
+  padding: 9px 8px;
+  border-radius: 6px;
+  border: 1px solid #cbd5e1;
+  margin-top: 10px;
+  background: #fff;
+}
+.mm-vs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: #64748b;
+  min-width: 65px;
+}
+.mm-fields-row {
+  display: flex;
+  gap: 18px;
+  margin-bottom: 18px;
+  align-items: flex-end;
+}
+.mm-fields-row > div {
+  flex: 1;
+}
+.mm-fields-row label {
+  font-size: 1rem;
+  font-weight: 500;
+}
+.mm-fields-row input, .mm-fields-row select {
+  width: 100%;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: 1px solid #cbd5e1;
+  padding: 8px 8px;
+  margin-top: 5px;
+}
+.mm-btns-row {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 12px;
+}
+.mm-btn-main {
+  flex: 1;
+  background: #2563eb;
+  color: #fff;
+  font-weight: bold;
+  padding: 14px 0;
+  border: none;
+  border-radius: 6px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.mm-btn-main:hover { background: #1749af; }
+.mm-btn-cancel {
+  flex: 1;
+  background: #e5e7eb;
+  color: #222;
+  font-weight: bold;
+  padding: 14px 0;
+  border: none;
+  border-radius: 6px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.mm-btn-cancel:hover { background: #cbd5e1; }
+.mm-message {
+  padding: 14px 0;
+  margin-bottom: 14px;
+  border-radius: 7px;
+  text-align: center;
+  font-weight: 500;
+}
+.mm-message.error { background: #fee2e2; color: #991b1b; }
+.mm-message.success { background: #bbf7d0; color: #14532d; }
+.mm-table-container {
+  overflow-x: auto;
+  margin-top: 26px;
+}
+.mm-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+}
+.mm-table th, .mm-table td {
+  padding: 10px 12px;
+  text-align: center;
+  border-bottom: 1px solid #e2e8f0;
+}
+.mm-table th {
+  background: #f1f5f9;
+  font-weight: bold;
+}
+.mm-table tr:nth-child(even) td {
+  background: #f9fafb;
+}
+.mm-table-status {
+  padding: 3px 10px;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 13px;
+  display: inline-block;
+}
+.mm-status-pending {
+  background: #fef3c7;
+  color: #92400e;
+}
+.mm-status-completed {
+  background: #d1fae5;
+  color: #065f46;
+}
+.mm-status-cancelled {
+  background: #fee2e2;
+  color: #991b1b;
+}
+.mm-table .mm-btn-edit, .mm-table .mm-btn-delete {
+  border: none;
+  border-radius: 4px;
+  padding: 5px 13px;
+  font-weight: 600;
+  margin-right: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+.mm-table .mm-btn-edit { background: #2563eb; color: #fff; }
+.mm-table .mm-btn-edit:hover { background: #1749af; }
+.mm-table .mm-btn-delete { background: #f87171; color: #fff; }
+.mm-table .mm-btn-delete:hover { background: #b91c1c; }

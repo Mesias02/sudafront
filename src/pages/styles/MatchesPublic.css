@@ -1,0 +1,8 @@
+.rbc-month-row {
+  max-height: 90px !important; /* fuerza altura máxima de cada fila */
+}
+.rbc-event {
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+}
