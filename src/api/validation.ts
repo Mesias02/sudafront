@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API = process.env.REACT_APP_API_URL || "/api/validation";
+const API = process.env.REACT_APP_API_URL || "/api/";
 export interface PlayerPending {
   id: number;
   name: string;
@@ -47,7 +47,7 @@ export interface ValidationHistory {
 }
 
 export const getValidationHistory = async (token: string): Promise<ValidationHistory[]> => {
-  const res = await axios.get(`${API}/history`, {
+  const res = await axios.get(`${API}validation/history`, {
     headers: { Authorization: `Bearer ${token}` }
   });
   return res.data;
@@ -55,55 +55,55 @@ export const getValidationHistory = async (token: string): Promise<ValidationHis
 
 
 export const getPendingTeams = async (token: string) => {
-  const res = await axios.get(`${API}/teams/pending`, {
+  const res = await axios.get(`${API}validation/teams/pending`, {
     headers: { Authorization: `Bearer ${token}` }
   });
   return res.data;
 };
 
 export const getPendingPlayers = async (token: string) => {
-  const res = await axios.get(`${API}/players/pending`, {
+  const res = await axios.get(`${API}validation/players/pending`, {
     headers: { Authorization: `Bearer ${token}` }
   });
   return res.data;
 };
 
 export const validateTeam = async (id: number, token: string) => {
-  await axios.put(`${API}/teams/${id}/validate`, null, {
+  await axios.put(`${API}validation/teams/${id}/validate`, null, {
     headers: { Authorization: `Bearer ${token}` }
   });
 };
 
 export const validatePlayer = async (id: number, token: string) => {
-  await axios.put(`${API}/players/${id}/validate`, null, {
+  await axios.put(`${API}validation/players/${id}/validate`, null, {
     headers: { Authorization: `Bearer ${token}` }
   });
 };
 
 // Editar equipo
 export const editTeam = async (id: number, data: { name: string; contactNumber: string }, token: string) => {
-  await axios.put(`${API}/teams/${id}/edit`, data, {
+  await axios.put(`${API}validation/teams/${id}/edit`, data, {
     headers: { Authorization: `Bearer ${token}` }
   });
 };
 
 // Editar jugador
 export const editPlayer = async (id: number, data: { name: string; cedula: string; dorsal: number; carrera: string }, token: string) => {
-  await axios.put(`${API}/players/${id}/edit`, data, {
+  await axios.put(`${API}validation/players/${id}/edit`, data, {
     headers: { Authorization: `Bearer ${token}` }
   });
 };
 
 // Rechazar (eliminar) equipo
 export const rejectTeam = async (id: number, token: string) => {
-  await axios.delete(`${API}/teams/${id}/reject`, {
+  await axios.delete(`${API}validation/teams/${id}/reject`, {
     headers: { Authorization: `Bearer ${token}` }
   });
 };
 
 // Rechazar (eliminar) jugador
 export const rejectPlayer = async (id: number, token: string) => {
-  await axios.delete(`${API}/players/${id}/reject`, {
+  await axios.delete(`${API}validation/players/${id}/reject`, {
     headers: { Authorization: `Bearer ${token}` }
   });
 };
