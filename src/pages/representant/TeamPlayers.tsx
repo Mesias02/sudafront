@@ -5,6 +5,7 @@ import { getPlayersByTeam, updatePlayer, deletePlayer } from "../../api/players"
 import { getTeams, getTeamOfRepresentative } from "../../api/teams";
 import { jwtDecode } from "jwt-decode";
 import ConfirmDialog from "../../components/ConfirmDialog";
+import BackButton from "../../components/BackButton";
 
 interface TokenPayload {
   sub: string;
@@ -260,9 +261,8 @@ export default function TeamPlayers() {
         </form>
       )}
 
-      <button className="btn-back" onClick={() => navigate("/teams")}>
-        Volver
-      </button>
+      <BackButton to="/teams" className="mb-3" />
+
 
       <hr />
       <h3>Lista de jugadores</h3>
