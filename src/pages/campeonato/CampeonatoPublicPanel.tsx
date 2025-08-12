@@ -407,6 +407,34 @@ export default function CampeonatoPublicPanel() {
           .nav-label {
             font-size: 11px;
           }
+            
+        /* Evitar overflow horizontal global (por si acaso) */
+html, body { max-width: 100%; overflow-x: hidden; }
+
+/* Estos tres garantizan que el card nunca exceda el viewport */
+.campeonato-container,
+.campeonato-content,
+.campeonato-content > div {
+  width: 100%;
+  max-width: 100%;
+}
+
+/* Padding fluido del card para que no “empuje” en móvil */
+.campeonato-content > div {
+  padding: clamp(16px, 4vw, 32px);
+}
+
+/* En móvil, fuerza que TODO quede dentro del viewport */
+@media (max-width: 768px) {
+  .campeonato-content { padding: 16px; }
+  .campeonato-content > div {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+}
+
+          
         }
       `}</style>
     </div>
